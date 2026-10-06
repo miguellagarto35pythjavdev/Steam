@@ -54,13 +54,7 @@ steam-landing/
 
 | Name | Section |
 |------|---------|
-| _Add name_ | _Add section_ |
+|Serillano, Jerry S. II | BSCPE 3B |
 | _Add name_ | _Add section_ |
 
-## Course
 
-_Add course code, subject, instructor, and school year here._
-=======
-# Steam
-Activity in Elective I: Software Development
->>>>>>> 2e4ac147db032e2c020104a1c60b628146219209
