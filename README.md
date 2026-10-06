@@ -56,6 +56,7 @@ steam-landing/
 |------|---------|
 |Serillano, Jerry S. II | BSCPE 3B |
 |Lagarto, Miguel Ice Francois | BSCPE 3B |
+|Medina, Jesthur Jasper D. | BSCPE 3B |
 | _Add name_ | _Add section_ |
 
 
