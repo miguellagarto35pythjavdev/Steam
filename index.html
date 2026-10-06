@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steam Autumn Sale — Landing Page Draft v0.1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Steam home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#c7d5e0"/><circle cx="26" cy="15" r="6" fill="#171d25"/><circle cx="26" cy="15" r="3" fill="#c7d5e0"/><circle cx="12" cy="26" r="5" fill="#171d25"/><path d="M12 26l12-9" stroke="#171d25" stroke-width="3"/></svg>
+      STEAM
+    </a>
+    <nav class="mainnav" aria-label="Main">
+      <a href="#" aria-current="page">Store</a><a href="#">Community</a><a href="#">About</a><a href="#">Support</a>
+    </nav>
+    <div class="acct">
+      <a class="btn-install" href="#">Install Steam</a>
+      <a href="#">sign in</a><span aria-hidden="true">|</span><a href="#">language</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="sub">
+    <button>Browse</button><button>Recommendations</button><button>Categories</button><button>Ways to Play</button><button>Special Sections</button>
+    <form class="search" role="search" onsubmit="return false">
+      <input type="search" placeholder="Search the store" aria-label="Search the store">
+      <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="#0f1923" stroke-width="2.5"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/></svg></button>
+    </form>
+  </div>
+
+  <section class="banner" aria-labelledby="sale-title">
+    <p class="brand">STEAM</p>
+    <h1 id="sale-title">AUTUMN<br>SALE</h1>
+    <p class="dates">On now thru Oct 8 at 10 AM PT</p>
+    <svg class="mascot" viewBox="0 0 240 200" aria-hidden="true">
+      <ellipse cx="120" cy="188" rx="100" ry="10" fill="#0003"/>
+      <rect x="140" y="60" width="90" height="100" rx="8" fill="#a9703c"/><rect x="140" y="60" width="90" height="22" rx="8" fill="#c58a4e"/>
+      <ellipse cx="90" cy="140" rx="55" ry="38" fill="#7f8ee0"/><circle cx="55" cy="105" r="24" fill="#8c9bec"/>
+      <path d="M70 100l-30-45 40 25z" fill="#5b6bc8"/><circle cx="48" cy="102" r="4" fill="#1b1b3a"/>
+      <circle cx="195" cy="45" r="16" fill="#fff"/><circle cx="195" cy="28" r="6" fill="#e8553b"/>
+    </svg>
+  </section>
+
+  <section class="featured" aria-label="Featured sale titles">
+    <button class="arrow l" aria-label="Previous" data-dir="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M15 4l-8 8 8 8"/></svg></button>
+    <div class="track" id="track">
+      <a class="card" href="#"><div class="art" style="background:linear-gradient(160deg,#e9e3da,#9aa3ad 55%,#3a4252)"></div>
+        <span class="title" style="font-weight:600;letter-spacing:6px">007 FIRST LIGHT</span>
+        <div class="price"><span class="off">-30%</span><span class="was">₱2,650.00</span><span class="now">₱1,855.00</span></div></a>
+      <a class="card" href="#"><div class="art" style="background:linear-gradient(180deg,#26548f,#5a3f9a 55%,#c4562a)"></div>
+        <span class="title">TOTAL WAR<br>WARHAMMER III</span>
+        <div class="price"><span class="off">-85%</span><span class="was">₱2,215.00</span><span class="now">₱332.25</span></div></a>
+      <a class="card" href="#"><div class="art" style="background:linear-gradient(180deg,#2b4a6a,#34507a 50%,#8a3b2e)"></div>
+        <span class="title">ESCAPE FROM TARKOV</span>
+        <div class="price"><span class="off">-25%</span><span class="was">₱1,150.00</span><span class="now">₱862.50</span></div></a>
+    </div>
+    <button class="arrow r" aria-label="Next" data-dir="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 4l8 8-8 8"/></svg></button>
+    <div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </section>
+
+  <section class="deals" aria-labelledby="greats">
+    <h2 id="greats">Especially great deals on some of the all-time greats</h2>
+    <div class="row3">
+      <a class="tile" href="#"><div class="art" style="background:linear-gradient(135deg,#1b3a9a,#7a4cc8 60%,#2a1b5a)"></div><span class="name">ORI and the Will of the Wisps</span>
+        <div class="price"><span class="off">-90%</span><span class="was">₱649.95</span><span class="now">₱64.99</span></div></a>
+      <a class="tile" href="#"><div class="art" style="background:linear-gradient(90deg,#d9a21b 0 55%,#243b53 55%)"></div><span class="name">Construction Simulator</span>
+        <div class="price"><span class="off">-90%</span><span class="was">₱765.00</span><span class="now">₱76.50</span></div></a>
+      <a class="tile" href="#"><div class="art" style="background:linear-gradient(180deg,#3aa0ea,#cfe9fb)"></div><span class="name" style="color:#0f1923;text-shadow:none;font-size:30px">STEEP</span>
+        <div class="price"><span class="off">-95%</span><span class="was">₱1,100.00</span><span class="now">₱55.00</span></div></a>
+    </div>
+  </section>
+
+  <section class="grid4" aria-label="More discounted games">
+    <a class="tile" href="#"><div class="art" style="background:linear-gradient(135deg,#f4eee6,#a9c8ee)"></div><span class="name" style="color:#2a3b55;text-shadow:none">Featured pick</span>
+      <div class="price"><span class="off">-67%</span><span class="was">₱549.95</span><span class="now">₱181.48</span></div></a>
+    <a class="tile" href="#"><div class="art" style="background:linear-gradient(135deg,#3b2a22,#a8452a)"></div><span class="name">DOOM: The Dark Ages</span>
+      <div class="price"><span class="off">-50%</span><span class="was">₱2,490.00</span><span class="now">₱1,245.00</span></div></a>
+    <a class="tile" href="#"><div class="art" style="background:linear-gradient(135deg,#2f3a45,#8a9099)"></div><span class="name">Clair Obscur: Expedition 33</span>
+      <div class="price"><span class="off">-20%</span><span class="was">₱1,800.00</span><span class="now">₱1,440.00</span></div></a>
+    <a class="tile" href="#"><div class="art" style="background:linear-gradient(135deg,#1b6a9a,#e8742b 60%,#2a8a3a)"></div><span class="name">College Football 27</span>
+      <div class="price"><span class="off">-35%</span><span class="was">₱3,499.00</span><span class="now">₱2,274.35</span></div></a>
+  </section>
+</main>
+
+<footer><div class="wrap">Draft v0.1 — student replica for coursework. Not affiliated with Valve. Game titles and prices are placeholder content.</div></footer>
+
+<script>
+const track=document.getElementById('track');
+document.querySelectorAll('.arrow').forEach(b=>b.addEventListener('click',()=>{
+  track.scrollBy({left:b.dataset.dir*track.clientWidth/3,behavior:'smooth'});
+}));
+</script>
+</body>
+</html>
