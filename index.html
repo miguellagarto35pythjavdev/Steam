@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Steam Autumn Sale — Landing Page Draft v0.1</title>
+<title>Steam Autumn Sale — Landing Page Draft v0.2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -21,7 +22,7 @@
     </nav>
     <div class="acct">
       <a class="btn-install" href="#">Install Steam</a>
-      <a href="#">sign in</a><span aria-hidden="true">|</span><a href="#">language</a>
+      <a href="login.html" id="authLink">sign in</a><span aria-hidden="true">|</span><a href="#">language</a>
     </div>
   </div>
 </header>
@@ -51,51 +52,89 @@
   <section class="featured" aria-label="Featured sale titles">
     <button class="arrow l" aria-label="Previous" data-dir="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M15 4l-8 8 8 8"/></svg></button>
     <div class="track" id="track">
-      <a class="card" href="#"><div class="art" style="background:linear-gradient(160deg,#e9e3da,#9aa3ad 55%,#3a4252)"></div>
-        <span class="title" style="font-weight:600;letter-spacing:6px">007 FIRST LIGHT</span>
-        <div class="price"><span class="off">-30%</span><span class="was">₱2,650.00</span><span class="now">₱1,855.00</span></div></a>
-      <a class="card" href="#"><div class="art" style="background:linear-gradient(180deg,#26548f,#5a3f9a 55%,#c4562a)"></div>
-        <span class="title">TOTAL WAR<br>WARHAMMER III</span>
-        <div class="price"><span class="off">-85%</span><span class="was">₱2,215.00</span><span class="now">₱332.25</span></div></a>
-      <a class="card" href="#"><div class="art" style="background:linear-gradient(180deg,#2b4a6a,#34507a 50%,#8a3b2e)"></div>
-        <span class="title">ESCAPE FROM TARKOV</span>
-        <div class="price"><span class="off">-25%</span><span class="was">₱1,150.00</span><span class="now">₱862.50</span></div></a>
+      <a class="card" href="#"><img class="art" src="images/arachno-panic.jpg" width="438" height="517" alt="Arachno-Panic key art: an astronaut in an orange suit watches giant glowing spiders crawl over a space station">
+        <span class="title">Arachno-Panic</span>
+        <div class="price"><span class="off">-40%</span><span class="was">₱699.00</span><span class="now">₱419.40</span></div></a>
+      <a class="card" href="#"><img class="art" src="images/bird-brain.jpg" width="457" height="452" alt="Bird-Brain Blizzard key art: a detective with a magnifying glass inspects a frozen owl statue in a snowy town">
+        <span class="title">Bird-Brain Blizzard</span>
+        <div class="price"><span class="off">-25%</span><span class="was">₱449.00</span><span class="now">₱336.75</span></div></a>
+      <a class="card" href="#"><img class="art" src="images/feather.jpg" width="409" height="415" alt="Feathered Fury Franchise key art: an armed eagle, owl, hummingbird and crow squad in a jungle">
+        <span class="title">Feathered Fury Franchise</span>
+        <div class="price"><span class="off">-60%</span><span class="was">₱599.00</span><span class="now">₱239.60</span></div></a>
     </div>
     <button class="arrow r" aria-label="Next" data-dir="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 4l8 8-8 8"/></svg></button>
-    <div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
   </section>
 
   <section class="deals" aria-labelledby="greats">
     <h2 id="greats">Especially great deals on some of the all-time greats</h2>
     <div class="row3">
-      <a class="tile" href="#"><div class="art" style="background:linear-gradient(135deg,#1b3a9a,#7a4cc8 60%,#2a1b5a)"></div><span class="name">ORI and the Will of the Wisps</span>
-        <div class="price"><span class="off">-90%</span><span class="was">₱649.95</span><span class="now">₱64.99</span></div></a>
-      <a class="tile" href="#"><div class="art" style="background:linear-gradient(90deg,#d9a21b 0 55%,#243b53 55%)"></div><span class="name">Construction Simulator</span>
-        <div class="price"><span class="off">-90%</span><span class="was">₱765.00</span><span class="now">₱76.50</span></div></a>
-      <a class="tile" href="#"><div class="art" style="background:linear-gradient(180deg,#3aa0ea,#cfe9fb)"></div><span class="name" style="color:#0f1923;text-shadow:none;font-size:30px">STEEP</span>
-        <div class="price"><span class="off">-95%</span><span class="was">₱1,100.00</span><span class="now">₱55.00</span></div></a>
+      <a class="tile wide" style="--ar:1186/438" href="#"><img class="art" src="images/fully_dune.jpg" width="1186" height="438" alt="Fully Dune: Messiah key art: a lone fighter stands on a giant sandworm in a desert with ornithopters overhead" loading="lazy">
+        <span class="name">Fully Dune: Messiah</span>
+        <div class="price"><span class="off">-90%</span><span class="was">₱1,299.00</span><span class="now">₱129.90</span></div></a>
+      <a class="tile" style="--ar:2/1" href="#"><img class="art" src="images/dragon-slayer.jpg" width="1277" height="541" alt="Dragon Slayer key art: a warrior and his party face a fire-breathing dragon above a snowy mountain valley" loading="lazy">
+        <span class="name">Dragon Slayer</span>
+        <div class="price"><span class="off">-75%</span><span class="was">₱1,899.00</span><span class="now">₱474.75</span></div></a>
+      <a class="tile" style="--ar:2/1" href="#"><img class="art" src="images/gotta-go-fast.jpg" width="918" height="529" alt="Gotta Go Fast key art: sports cars racing along a sandy coast past carved stone pillars" loading="lazy">
+        <span class="name">Gotta Go Fast</span>
+        <div class="price"><span class="off">-50%</span><span class="was">₱1,495.00</span><span class="now">₱747.50</span></div></a>
     </div>
   </section>
 
-  <section class="grid4" aria-label="More discounted games">
-    <a class="tile" href="#"><div class="art" style="background:linear-gradient(135deg,#f4eee6,#a9c8ee)"></div><span class="name" style="color:#2a3b55;text-shadow:none">Featured pick</span>
-      <div class="price"><span class="off">-67%</span><span class="was">₱549.95</span><span class="now">₱181.48</span></div></a>
-    <a class="tile" href="#"><div class="art" style="background:linear-gradient(135deg,#3b2a22,#a8452a)"></div><span class="name">DOOM: The Dark Ages</span>
-      <div class="price"><span class="off">-50%</span><span class="was">₱2,490.00</span><span class="now">₱1,245.00</span></div></a>
-    <a class="tile" href="#"><div class="art" style="background:linear-gradient(135deg,#2f3a45,#8a9099)"></div><span class="name">Clair Obscur: Expedition 33</span>
-      <div class="price"><span class="off">-20%</span><span class="was">₱1,800.00</span><span class="now">₱1,440.00</span></div></a>
-    <a class="tile" href="#"><div class="art" style="background:linear-gradient(135deg,#1b6a9a,#e8742b 60%,#2a8a3a)"></div><span class="name">College Football 27</span>
-      <div class="price"><span class="off">-35%</span><span class="was">₱3,499.00</span><span class="now">₱2,274.35</span></div></a>
+  <section class="more" aria-labelledby="more-title">
+    <h2 id="more-title">More discounted games</h2>
+    <div class="grid4">
+      <a class="tile" style="--ar:2.25/1" href="#"><img class="art" src="images/war-storm.jpg" width="1270" height="569" alt="War Storm key art: tanks, warships and fighter planes clash under a lightning storm" loading="lazy">
+        <span class="name">War Storm</span>
+        <div class="price"><span class="off">-35%</span><span class="was">₱1,650.00</span><span class="now">₱1,072.50</span></div></a>
+      <a class="tile" style="--ar:2.25/1" href="#"><img class="art" src="images/iron-cross.jpg" width="1275" height="557" alt="Iron Cross key art: a strategy map of Europe beside a battlefield of tanks and ruined villages" loading="lazy">
+        <span class="name">Iron Cross</span>
+        <div class="price"><span class="off">-50%</span><span class="was">₱2,100.00</span><span class="now">₱1,050.00</span></div></a>
+      <a class="tile wide" style="--ar:1111/487" href="#"><img class="art" src="images/fighting_field.jpg" width="1111" height="487" alt="Fighting Field 5 key art: blocky World War II soldiers charge across a grassy battlefield" loading="lazy">
+        <span class="name">Fighting Field 5</span>
+        <div class="price"><span class="off">-20%</span><span class="was">₱899.00</span><span class="now">₱719.20</span></div></a>
+      <a class="tile wide" style="--ar:1108/391" href="#"><img class="art" src="images/away_from_kharkov.jpg" width="1108" height="391" alt="Away From Kharkov key art: a soldier kneels in a snowy ruined city as helicopters and tanks advance" loading="lazy">
+        <span class="name">Away From Kharkov</span>
+        <div class="price"><span class="off">-30%</span><span class="was">₱1,350.00</span><span class="now">₱945.00</span></div></a>
+    </div>
+    <p class="cta"><a href="#">See all deals</a></p>
   </section>
 </main>
 
-<footer><div class="wrap">Draft v0.1 — student replica for coursework. Not affiliated with Valve. Game titles and prices are placeholder content.</div></footer>
+<footer><div class="wrap"><nav class="flinks" aria-label="Footer"><a href="login.html">Sign in</a><a href="#">About Steam</a><a href="#">Support</a><a href="#">Refunds</a><a href="#">Privacy</a></nav><p>Draft v0.2 — student replica for coursework. Not affiliated with Valve. Game titles and prices are placeholder content.</p></div></footer>
 
 <script>
 const track=document.getElementById('track');
-document.querySelectorAll('.arrow').forEach(b=>b.addEventListener('click',()=>{
-  track.scrollBy({left:b.dataset.dir*track.clientWidth/3,behavior:'smooth'});
+const dotsEl=document.getElementById('dots');
+const arrows=document.querySelectorAll('.arrow');
+const cards=[...track.children];
+cards.forEach(()=>dotsEl.appendChild(document.createElement('i')));
+const dots=[...dotsEl.children];
+function sync(){
+  const overflow=track.scrollWidth>track.clientWidth+2;
+  arrows.forEach(a=>a.hidden=!overflow);
+  dotsEl.hidden=!overflow;
+  const i=Math.round(track.scrollLeft/(cards[0].offsetWidth+16));
+  dots.forEach((d,n)=>d.classList.toggle('on',n===i));
+}
+arrows.forEach(b=>b.addEventListener('click',()=>{
+  track.scrollBy({left:b.dataset.dir*(cards[0].offsetWidth+16),behavior:'smooth'});
 }));
+track.addEventListener('scroll',sync,{passive:true});
+addEventListener('resize',sync);
+sync();
+
+const authLink=document.getElementById('authLink');
+const user=sessionStorage.getItem('steamUser');
+if(user){
+  authLink.textContent='Sign out ('+user+')';
+  authLink.href='#';
+  authLink.addEventListener('click',e=>{
+    e.preventDefault();
+    sessionStorage.removeItem('steamUser');
+    location.reload();
+  });
+}
 </script>
 </body>
 </html>

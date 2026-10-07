@@ -7,29 +7,27 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header">
+<header class="top">
   <div class="wrap">
-    <div class="brand">
-      <a class="logo" href="index.html"><i></i>STEAM</a>
-      <ul class="main-nav">
-        <li class="active"><a href="index.html">Store</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Support</a></li>
-      </ul>
-    </div>
+    <a class="logo" href="index.html" aria-label="Steam home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#c7d5e0"/><circle cx="26" cy="15" r="6" fill="#171d25"/><circle cx="26" cy="15" r="3" fill="#c7d5e0"/><circle cx="12" cy="26" r="5" fill="#171d25"/><path d="M12 26l12-9" stroke="#171d25" stroke-width="3"/></svg>
+      STEAM
+    </a>
+    <nav class="mainnav" aria-label="Main">
+      <a href="index.html">Store</a><a href="#">Community</a><a href="#">About</a><a href="#">Support</a>
+    </nav>
   </div>
 </header>
 
 <section class="login-bg">
   <div class="login-box">
     <h1>Sign in</h1>
-    <form class="login-card" onsubmit="return false">
+    <form class="login-card" id="loginForm">
       <div>
-        <label>SIGN IN WITH ACCOUNT NAME</label>
-        <input type="text">
-        <label class="p">PASSWORD</label>
-        <input type="password">
+        <label for="user">SIGN IN WITH ACCOUNT NAME</label>
+        <input type="text" id="user" required autocomplete="username">
+        <label class="p" for="pass">PASSWORD</label>
+        <input type="password" id="pass" required autocomplete="current-password">
         <div class="remember">
           <input type="checkbox" checked id="rm">
           <label for="rm" style="margin:0;color:#c6d4df;font-weight:400">Remember me</label>
@@ -64,5 +62,14 @@
     <div><h5>MORE</h5><ul><li><a href="#">Get Steam</a></li><li><a href="#">My Account</a></li></ul></div>
   </div>
 </footer>
+<script>
+document.getElementById('loginForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('user').value.trim();
+  if(!name)return;
+  sessionStorage.setItem('steamUser',name);
+  location.href='index.html';
+});
+</script>
 </body>
 </html>
