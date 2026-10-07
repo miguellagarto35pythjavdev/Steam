@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign In</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="wrap">
+    <div class="brand">
+      <a class="logo" href="index.html"><i></i>STEAM</a>
+      <ul class="main-nav">
+        <li class="active"><a href="index.html">Store</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<section class="login-bg">
+  <div class="login-box">
+    <h1>Sign in</h1>
+    <form class="login-card" onsubmit="return false">
+      <div>
+        <label>SIGN IN WITH ACCOUNT NAME</label>
+        <input type="text">
+        <label class="p">PASSWORD</label>
+        <input type="password">
+        <div class="remember">
+          <input type="checkbox" checked id="rm">
+          <label for="rm" style="margin:0;color:#c6d4df;font-weight:400">Remember me</label>
+        </div>
+        <button class="signin" type="submit">Sign in</button>
+        <a class="help" href="#">Help, I can't sign in</a>
+      </div>
+      <div>
+        <label>OR SIGN IN WITH QR</label>
+        <div class="qr"></div>
+        <p style="font-size:14px;text-align:center">Use the Steam Mobile App to sign in via QR Code</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="new">
+  <h2>New to Steam?</h2>
+  <a class="signin" href="#">Create an account</a>
+  <p style="margin-top:16px">It's free and easy. Discover thousands of games to play with millions of new friends.</p>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <div class="flogo">STEAM <span>VALVE</span></div>
+      <p class="copy">&copy; 2026 Valve Corporation. All rights reserved.<br>VAT included in all prices where applicable.</p>
+    </div>
+    <div><h5>STEAM</h5><ul><li><a href="#">About Steam</a></li><li><a href="#">Gift Cards</a></li></ul></div>
+    <div><h5>VALVE</h5><ul><li><a href="#">About Valve</a></li><li><a href="#">Jobs</a></li></ul></div>
+    <div><h5>LEGAL</h5><ul><li><a href="#">Privacy</a></li><li><a href="#">Refunds</a></li></ul></div>
+    <div><h5>MORE</h5><ul><li><a href="#">Get Steam</a></li><li><a href="#">My Account</a></li></ul></div>
+  </div>
+</footer>
+</body>
+</html>
