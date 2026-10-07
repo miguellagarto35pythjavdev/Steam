@@ -1,0 +1,11 @@
+Claude prompt from image reference:
+
+This is a Steam landing page, the groups tasks is to at least be 
+close to replicate it it using HTML and CSS, now draft an initial 
+design using the UI related skills installed.
+
+Claude prompt for adding images and debugging
+using this, add the images in the index like a 
+complete steam landing page and also change the name of 
+the titles based on the games.
+
