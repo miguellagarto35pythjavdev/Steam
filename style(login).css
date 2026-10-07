@@ -1,0 +1,17 @@
+/* sign-in page */
+.login-bg{min-height:620px;display:flex;justify-content:center;background:linear-gradient(#0e141c,#1b2838);padding:70px 20px}
+.login-box{width:min(880px,100%)}
+.login-box h1{color:#fff;font-size:40px;margin-bottom:30px}
+.login-card{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;background:#171d25;padding:50px}
+.login-card label{display:block;font-size:14px;font-weight:600;color:var(--blue);margin-bottom:8px}
+.login-card label.p{color:#8f98a0;margin-top:20px}
+.login-card input[type=text],.login-card input[type=password]{width:100%;height:46px;background:#32363f;border:0;color:#fff;padding:0 12px;font-size:16px}
+.login-card input:focus{outline:2px solid var(--blue)}
+.remember{margin:18px 0 22px;display:flex;gap:10px;align-items:center}
+.login-card button.signin{width:100%;border:0;cursor:pointer;background:linear-gradient(90deg,#06bfff,#2d73ff)}
+.help{display:block;text-align:center;margin-top:30px;text-decoration:underline;font-size:14px}
+.qr{width:248px;height:248px;margin-bottom:12px;background:#fff repeating-conic-gradient(#000 0 25%,#fff 0 50%) 0 0/16px 16px;border:12px solid #fff}
+.new{text-align:center;padding:60px 20px;background:#1b2838;color:#fff}
+.new .signin{margin-top:12px}
+
+@media(max-width:1000px){.prev{left:0}.next{right:0}.login-card{grid-template-columns:1fr}}
